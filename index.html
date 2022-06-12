@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="scss/main.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="logo.css">
+    <title>Albaron</title>
+<script src="cute-alert-master/cute-alert.js"></script>
+
+    <style>
+
+        section{
+            padding: 60px 0;
+        }
+        a {
+				color: rgb(236, 233, 49);
+			}
+
+			#menu {
+				position: absolute;
+				bottom: 20px;
+				width: 100%;
+				text-align: center;
+			}
+
+			.element {
+				width: 120px;
+				height: 160px;
+				box-shadow: 0px 0px 12px rgba(255, 230, 8, 0.945);
+				border: 1px solid rgb(231, 217, 16);
+				font-family: Helvetica, sans-serif;
+				text-align: center;
+				line-height: normal;
+				cursor: default;
+			}
+
+			.element:hover {
+				box-shadow: 0px 0px 12px rgba(214, 202, 37, 0.75);
+				border: 1px solid rgba(255, 253, 127, 0.75);
+			}
+
+				.element .number {
+					position: absolute;
+					top: 20px;
+					right: 20px;
+					font-size: 12px;
+					color: rgba(255, 242, 127, 0.75);
+				}
+
+				.element .symbol {
+					position: absolute;
+					top: 40px;
+					left: 0px;
+					right: 0px;
+					font-size: 60px;
+					font-weight: bold;
+					color: rgba(255,255,255,0.75);
+					text-shadow: 0 0 10px rgba(226, 194, 14, 0.95);
+				}
+
+				.element .details {
+					position: absolute;
+					bottom: 15px;
+					left: 0px;
+					right: 0px;
+					font-size: 12px;
+					color: rgba(233, 219, 25, 0.75);
+				}
+
+			button {
+				color: rgba(7, 85, 85, 0.658);
+				background: transparent;
+				outline: 1px solid rgba(241, 241, 241, 0.75);
+				border: 1px;
+				padding: 5px 10px;
+				cursor: pointer;
+			}
+
+			button:hover {
+				background-color: rgba(218, 236, 240, 0.938);
+			}
+
+			button:active {
+				color: #65c9e7;
+				background-color: rgba(251, 255, 0, 0.75);
+			}
+    </style>
+</head>
+<body id="body">
+<!-- NavBar -->
+<div id="container"></div>
+<!-- <div id="menu">
+  <button id="table">TABLE</button>
+  <button id="sphere">SPHERE</button>
+  <button id="helix">HELIX</button>
+  <button id="grid">GRID</button>
+</div> -->
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-primary ">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand blod" href="#"> -->
+        <div class="aaa">
+          <div class="bg">
+            <img class="ai" src="image/22.png" alt="">
+          </div>
+        </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contect">Contect</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#topic">Topic</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#update">Update</a>
+          </li>
+          <li class="nav-item dropdown">
+            <div class="btn-group">
+                <button type="button" class="btn btn-light">pricing</button>
+                <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#pricing">pricing 1</a></li>
+                  <li><a class="dropdown-item" href="#pricing">pricing 2</a></li>
+                  <!-- <li><a class="dropdown-item" href="#pricing">pricing 3</a></li> -->
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+              </div>
+               <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<!-- End NavBar -->
+<div class="your-element" data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500"></div>
+
+<!-- main image & text -->
+<section id="intro">
+    <div class="container-lg">
+        <div class="row justify-content-center align-items-center">
+            <div class="co-md-5 tesxt-center text-md-start">
+                <h1>
+                    <div class="display-2">Black Cat</div>
+                    <div class="display-2 text-muted"> Your now to profile</div>
+                </h1>
+                <p class="lead my-4 text-muted">more information
+                    <span>
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">More</button>
+
+                    </span>
+                </p>
+
+                <a href="#" id="look" class="btn btn-secondary btn-lg">Look</a>
+            </div>
+            <div class="col-md-5 text-center">
+                <!-- tooltip -->
+               <span class="aa" data-bs-placement="botton" title="Black Cat">
+                <img class="img-fluid" src="image/cat.jpeg" alt="cat">
+               </span>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--  -->
+<!-- Cards -->
+<section id="pricing" class="bg-light mt-5">
+    <div class="container-lg">
+<div class="text-center">
+    <h2>Pricing Plans</h2>
+    <p class="lead text-muted">Choose a pricing to suit you</p>
+</div>
+<div class="row my-5 align-items-center justify-content-center">
+
+    <div class="col-8 col-lg-4 col-xl-3">
+        <div class="card border-0">
+            <div class="card-body text-center py-4">
+                <h4 class="card-title">
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    Started </h4>
+                <p class="lead card-subtitle"></p>
+                <p class="display-5 my-4 text-primary fw-blod">$13.99</p>
+                <p class="card-teaxt mx-5 text-muted d-none d-lg-block">For Sell</p>
+                <dialo>
+                <a href="#" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+</dialo>
+            </div>
+        </div>
+    </div>
+    <div class="col-9 col-lg-4 col-xl-3">
+        <div class="card border-2 border-primary">
+
+                <div class="card-header text-center text-primary">
+                    <div>
+                    <i class="bi bi-stars"></i>
+                    <i class="bi bi-stars"></i>
+                    <i class="bi bi-stars"></i>
+                    <i class="bi bi-stars"></i>
+                    <i class="bi bi-stars"></i>
+                </div>
+                    Most Popular</div>
+                <div class="card-body text-center py-5">
+                    <h4 class="card-title">look</h4>
+                <p class="lead card-subtitle"></p>
+                <p class="display-5 my-4 text-primary fw-blod">$13.99</p>
+                <p class="card-teaxt mx-5 text-muted d-none d-lg-block">For Sell</p>
+                <a href="#"  class="omer btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-8 col-lg-4 col-xl-3">
+        <div class="card border-0">
+            <div class="card-body text-center py-4">
+                <h4 class="card-title">
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    End</h4>
+                <p class="lead card-subtitle"></p>
+                <p class="display-5 my-4 text-primary fw-blod">$13.99</p>
+                <p class="card-teaxt mx-5 text-muted d-none d-lg-block">For Sell</p>
+                <a href="#" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+    </div>
+</section>
+<!--  -->
+
+<!-- topic -->
+<section id="topic">
+    <div class="containar-md">
+        <div class="text-center">
+            <h2>Information to Cat</h2>
+            <p class="lead text-muted"> </p>
+        </div>
+
+        <div class="row my-5 g-5 justify-content-around align-items-center">
+            <div class="col-6 col-lg-4 ">
+                <img src="/image/caa.jpeg" class="rounded img-fluid border border-warning rounded-pill" alt="Cat"/>
+            </div>
+<div class="col-lg-6">
+            <!-- accorion -->
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                     Num 1
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">The black cat is a domestic cat with black fur of a purebred or mixed breed of cats, and the (CFA) recognized twenty-two species of cat breed that are born with black fur, and this offspring is abundant in Bombay, and the males of them have completely black fur than the females, due to the high They have melanin pigment, which also makes the eyes yellow.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                     Num 2
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Besides the stately black, black cats have yellow (closer to golden) eyes to match their striking coloration. The reason behind this is due to the “melanism” gene, which produces an excess of melanin, the dark pigment that makes cats black, and is also responsible for making their eyes yellow.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                     Num 3
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">In some cultures, black cats are considered a symbol of good luck</div>
+                  </div>
+                </div>
+              </div>
+            <!--  -->
+        </div>
+        </div>
+    </div>
+</section>
+<!--  -->
+
+<!--  -->
+<section id="contect">
+<div class="container-lg ">
+    <div class="justify-content-center row">
+    <div class="input-group mb-3 ">
+        <span class="input-group-text" id="basic-addon1">Name :</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <span class="input-group-text" id="basic-addon2">@example.com</span>
+      </div>
+      <div class="form-floating mb-4 mt-5">
+        <span class="input-group-text" id="basic-addon1">Your Massage</span>
+          <textarea class="form-control" style="height:140px"></textarea>
+      </div>
+      <div>
+ <button type="button" class="btn btn-secondary">Send</button>
+</div>
+</div>
+</div>
+</section>
+<section>
+
+</section>
+  <!-- Modal -->
+ <div class="container">
+     <di class="justify-items-center">
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+                </div>
+              </div>
+            </div>
+          </div>
+     </di>
+ </div>
+<!-- Button trigger modal -->
+<section class="bg-light" id="update">
+    <div class="conyainer">
+        <div class="text-center">
+            <h2>Stay in The Loop</h2>
+            <p class="lead">Get the lastest Update as they happen ...</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Launch static backdrop modal
+                  </button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- offcanvas -->
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasScrollingLabel"></h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p>This widespread superstition resulted in the horrific mass murder of cats, and sometimes even their owners.
+
+        Aside from continuing to represent all things weird, the fear of muted cats still has some influence today.
+
+        Muted cats can help your love life
+        It is believed that scary cats for many can actually improve your love life. In Japan for example, there is a belief that single women who own black cats attract more suitors.
+
+        In the English cats of Great Britain, the black cat is the perfect wedding gift, as they are believed to bring good luck to the bride.
+
+        The black cat can bring you luck</p>
+    </div>
+  </div>
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Offcanvas with backdrop</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p>.....</p>
+    </div>
+  </div>
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Black Cat</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p>This widespread superstition resulted in the horrific mass murder of cats, and sometimes even their owners.
+
+        Aside from continuing to represent all things weird, the fear of muted cats still has some influence today.
+
+        Muted cats can help your love life
+        It is believed that scary cats for many can actually improve your love life. In Japan for example, there is a belief that single women who own black cats attract more suitors.
+
+        In the English cats of Great Britain, the black cat is the perfect wedding gift, as they are believed to bring good luck to the bride.
+
+        The black cat can bring you luck</p>
+    </div>
+  </div>
+
+<!--  -->
+<h2></h2>
+
+<!-- your markup element -->
+<div class="your-element" data-tilt></div>
+<!--  -->
+<script src="/javascript/albaron.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+<script>
+    const tooltips = document.querySelectorAll('.aa')
+    tooltips.forEach(a=>{
+        new bootstrap.Tooltip(a)
+    });
+</script>
+
+<!--  -->
+
+
+
+<!-- at the end of the body -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="/javascript/van.js"></script>
+<script>
+VanillaTilt.init(document.querySelector(".aaa"), {
+max: 25,
+speed: 400,
+    glare:true,
+
+
+});
+</script>
+<script type="importmap">
+  {
+    "imports": {
+      "three": "../build/three.module.js"
+    }
+  }
+</script>
+</body>
+</html>
