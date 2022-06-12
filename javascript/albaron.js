@@ -32,16 +32,16 @@ const buy = document.querySelectorAll(".omer");
 const dia = document.querySelector("dialog");
 
 
-// buy.forEach(item => {
-//     item.addEventListener("click", () => {
-//         dia.show();
+buy.forEach(item => {
+    item.addEventListener("click", () => {
+        dia.show();
 
-//     })
-// });
+    })
+});
 
-// buy.addEventListener("click", () => {
-//     dia.show();
-// });
+buy.addEventListener("click", () => {
+    dia.show();
+});
 
 const clos = document.querySelector(".clos");
 
